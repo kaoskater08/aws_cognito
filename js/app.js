@@ -44,15 +44,15 @@
 
 	// User Pool
 	var poolData = {
-		UserPoolId: 'us-east-2_1wMgnys3q',
-		ClientId: '6045svoojm317evb1jjcomf993'
+		UserPoolId: '',
+		ClientId: ''
 	};
 
 	// Identity Pool ID
-	var identityPoolId = "us-east-2:f7e35bf4-0335-4f84-8932-4aab68e85292";
+	var identityPoolId = "";
 
 	// Cognito Sync store Name
-	var cognitoDatasetName = "haleiiieTest-users";
+	var cognitoDatasetName = "";
 
 	var cognitoUser, identityId, cognitoSync;
 
@@ -167,7 +167,7 @@
 		AWS.config.credentials = new AWS.CognitoIdentityCredentials({
 			IdentityPoolId: identityPoolId,
 			Logins: {
-				'cognito-idp.us-east-2.amazonaws.com/us-east-2_1wMgnys3q': idToken
+				'': idToken
 			}
 		});
 		// refreshes credentials using AWS.CognitoIdentity.getCredentialsForIdentity()
